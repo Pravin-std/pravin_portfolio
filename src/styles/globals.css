@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #090909;
+    --bg-secondary: #111111;
+    --bg-elevated: #181818;
+    --text-primary: #F5F5F5;
+    --text-muted: #888888;
+    --accent-red: #E53935;
+    --border-subtle: rgba(245, 245, 245, 0.10);
+    --border-strong: rgba(245, 245, 245, 0.20);
+  }
+
+  html {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Selection styling adhering to Black / White / Red visual identity */
+  ::selection {
+    background-color: var(--accent-red);
+    color: #F5F5F5;
+  }
+
+  /* Accessible focus indicators with accent red outline */
+  :focus-visible {
+    outline: 1px solid var(--accent-red);
+    outline-offset: 3px;
+  }
+}
+
+@theme {
+  --color-bg-primary: #090909;
+  --color-bg-secondary: #111111;
+  --color-bg-elevated: #181818;
+  --color-text-primary: #F5F5F5;
+  --color-text-muted: #888888;
+  --color-accent-red: #E53935;
+  --color-border-subtle: rgba(245, 245, 245, 0.10);
+  --color-border-strong: rgba(245, 245, 245, 0.20);
+
+  --font-display: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* Responsive editorial container utility */
+.editorial-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .editorial-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .editorial-container {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+}
+
+/* Brutalist technical label typography */
+.label-tech {
+  font-family: var(--font-mono, "IBM Plex Mono", monospace);
+  font-size: 0.6875rem; /* 11px */
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+/* Hairline technical borders */
+.border-fine {
+  border: 1px solid var(--border-subtle);
+}
+
+.border-fine-b {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.border-fine-t {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.border-fine-r {
+  border-right: 1px solid var(--border-subtle);
+}
+
+.border-fine-l {
+  border-left: 1px solid var(--border-subtle);
+}
+
+/* Editorial outlined text treatment */
+.text-stroke-white {
+  -webkit-text-stroke: 1.5px #F5F5F5;
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .text-stroke-white {
+    -webkit-text-stroke: 2px #F5F5F5;
+  }
+}
+
+/* Crosshair / Registration marker */
+.technical-corner {
+  position: relative;
+}
+
+.technical-corner::before,
+.technical-corner::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  pointer-events: none;
+}
+
+/* Respect user's motion preferences strictly */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
