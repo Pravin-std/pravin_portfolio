@@ -8,17 +8,6 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    // Ensures Vite process exits cleanly on CI / Vercel after build completes,
-    // preventing tailwindcss/vite background worker from keeping the event loop alive.
-    {
-      name: 'force-exit-after-build',
-      apply: 'build',
-      closeBundle() {
-        setTimeout(() => {
-          process.exit(0);
-        }, 20);
-      },
-    },
   ],
   resolve: {
     alias: {
