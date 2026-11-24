@@ -24,7 +24,7 @@ export const SceneContainer: React.FC<SceneContainerProps> = ({
   // Architectural editorial fallback (active during loading or under reduced-motion)
   const defaultFallback = (
     <div
-      className="w-full h-full flex flex-col items-center justify-center border-fine bg-[#111111]/30 p-6 relative select-none"
+      className="w-full h-full flex flex-col items-center justify-center bg-transparent p-6 relative select-none"
       role="img"
       aria-label="Abstract dimensional manifold geometry"
     >

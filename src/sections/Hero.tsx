@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
 
   const handleExploreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    scrollTo('#work', { offset: -64 });
+    scrollTo('#projects', { offset: -64 });
   };
 
   const handleAboutClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -33,10 +33,12 @@ export const Hero: React.FC = () => {
 
   return (
     <section
-      id="hero"
-      aria-label="Introduction & Signature 3D Experience"
+      id="work"
+      aria-label="Work - Introduction & Signature 3D Experience"
       className="relative min-h-[calc(100vh-4rem)] flex flex-col justify-between overflow-hidden bg-[#090909] text-[#F5F5F5] select-none"
     >
+      {/* Fallback anchor for backward compatibility */}
+      <div id="hero" className="sr-only" aria-hidden="true" />
       {/* Background Architectural Grid Lines */}
       <div className="absolute inset-0 pointer-events-none z-0 opacity-15" aria-hidden="true">
         <div className="editorial-container h-full border-fine-l border-fine-r flex justify-between">
@@ -61,10 +63,10 @@ export const Hero: React.FC = () => {
           <div className="flex items-center gap-4 text-[#888888] font-mono text-[11px]">
             <span className="hidden sm:inline flex items-center gap-1.5">
               <Compass size={12} className="text-[#E53935]" aria-hidden="true" />
-              13.0827° N, 80.2707° E
+              11.6643° N, 78.1460° E
             </span>
             <span className="text-[#F5F5F5] border border-[rgba(245,245,245,0.15)] px-2 py-0.5">
-              CHENNAI, IN
+              SALEM, IN
             </span>
           </div>
         </div>
@@ -114,7 +116,7 @@ export const Hero: React.FC = () => {
             >
               {/* Primary CTA */}
               <a
-                href="#work"
+                href="#projects"
                 onClick={handleExploreClick}
                 className="group relative inline-flex items-center gap-3 px-6 sm:px-8 py-3.5 bg-[#F5F5F5] text-[#090909] font-mono text-xs uppercase tracking-widest font-semibold hover:bg-[#E53935] hover:text-[#F5F5F5] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#E53935]"
               >
@@ -142,28 +144,19 @@ export const Hero: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Right Column: 3D Sculpture Stage (5 cols on desktop, responsive container) */}
-          <div className="lg:col-span-5 relative w-full h-[360px] sm:h-[440px] lg:h-[560px] flex items-center justify-center">
-            {/* Structural corner crosshairs around the 3D stage */}
-            <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#888888]/40 pointer-events-none" aria-hidden="true" />
-            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#888888]/40 pointer-events-none" aria-hidden="true" />
-            <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-[#888888]/40 pointer-events-none" aria-hidden="true" />
-            <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-[#888888]/40 pointer-events-none" aria-hidden="true" />
-
-            {/* Micro canvas technical label */}
-            <div className="absolute top-3 left-4 z-20 label-tech text-[10px] text-[#888888]/80 pointer-events-none">
-              <span>CANVAS // 01 [INTERACTIVE 3D]</span>
+          {/* Right Column: 3D Sculpture Stage (Freely floating, unboxed 3D stage) */}
+          <div className="lg:col-span-5 relative w-full h-[380px] sm:h-[460px] lg:h-[580px] xl:h-[640px] flex items-center justify-center">
+            {/* Freely floating expanded 3D WebGL Canvas with zero boundary restrictions */}
+            <div className="absolute -inset-4 sm:-inset-8 lg:-inset-12 w-[calc(100%+2rem)] sm:w-[calc(100%+4rem)] lg:w-[calc(100%+6rem)] h-[calc(100%+2rem)] sm:h-[calc(100%+4rem)] lg:h-[calc(100%+6rem)] flex items-center justify-center pointer-events-none">
+              <RedShiftCanvas className="w-full h-full pointer-events-auto" />
             </div>
-
-            {/* Code-split 3D WebGL Canvas */}
-            <RedShiftCanvas className="w-full h-full" />
           </div>
         </div>
 
         {/* Bottom Colophon Bar */}
         <div className="pt-4 border-fine-t flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 label-tech">
           <div className="flex items-center gap-3">
-            <span className="text-[#F5F5F5]">CHENNAI, INDIA</span>
+            <span className="text-[#F5F5F5]">SALEM, INDIA</span>
             <span className="text-[rgba(245,245,245,0.2)]">/</span>
             <span>AI &amp; DATA SCIENCE</span>
           </div>

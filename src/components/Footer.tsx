@@ -8,7 +8,7 @@ import { ArrowUp } from 'lucide-react';
  * Requirements:
  * - Brand & Title: PRAVIN K. / DIGITAL PORTFOLIO
  * - Philosophy: DESIGNED & DEVELOPED WITH INTENTION.
- * - Geography: CHENNAI, INDIA
+ * - Geography: SALEM, INDIA
  * - Copyright: © 2026 PRAVIN K.
  * - Technical marker: END OF TRANSMISSION.
  * - Clean back-to-top trigger powered by Lenis.
@@ -46,9 +46,9 @@ export const Footer: React.FC = () => {
         {/* Bottom Colophon Row */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono text-xs text-[#888888]">
           <div className="flex items-center gap-4">
-            <span className="text-[#F5F5F5]">CHENNAI, INDIA</span>
+            <span className="text-[#F5F5F5]">SALEM, INDIA</span>
             <span className="text-[rgba(245,245,245,0.2)]">/</span>
-            <span>13.0827° N, 80.2707° E</span>
+            <span>11.6643° N, 78.1460° E</span>
             <span className="text-[rgba(245,245,245,0.2)]">/</span>
             <span>© 2026 PRAVIN K.</span>
           </div>

@@ -34,7 +34,7 @@ const SOCIAL_LINKS: SocialLinkItem[] = [
  * - Emotional and typographic climax of the entire portfolio.
  * - Massive responsive headline: "HAVE AN IDEA? LET'S MAKE IT REAL."
  * - Large interactive email action with click-to-copy interaction and direct mailto link.
- * - Verified contact information: Email, Phone, Location (Chennai, TN, India), Social profiles.
+ * - Verified contact information: Email, Phone, Location (Salem, TN, India), Social profiles.
  * - Strictly avoids fake availability claims, generic contact forms, and gradients.
  */
 export const Contact: React.FC = () => {
@@ -180,7 +180,7 @@ export const Contact: React.FC = () => {
               <div>
                 <span className="label-tech block text-[9px] mb-0.5">GEOGRAPHY</span>
                 <span className="text-[#F5F5F5] font-medium text-sm">
-                  CHENNAI / TAMIL NADU / INDIA
+                  SALEM / TAMIL NADU / INDIA
                 </span>
               </div>
             </div>

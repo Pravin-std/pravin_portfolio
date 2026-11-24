@@ -16,10 +16,12 @@ export const SelectedWorks: React.FC = () => {
 
   return (
     <section
-      id="work"
+      id="projects"
       aria-label="Selected Works - Project Archive"
       className="relative py-24 md:py-36 bg-[#090909] text-[#F5F5F5] border-fine-t select-none"
     >
+      {/* Fallback anchor for backward compatibility */}
+      <div id="selected-works" className="sr-only" aria-hidden="true" />
       {/* Background Architectural Grid Lines */}
       <div className="absolute inset-0 pointer-events-none z-0 opacity-15" aria-hidden="true">
         <div className="editorial-container h-full border-fine-l border-fine-r flex justify-between">
@@ -109,7 +111,7 @@ export const SelectedWorks: React.FC = () => {
 
                 {/* Technology Badges */}
                 <div className="flex flex-wrap gap-2 mb-8">
-                  {['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Flutter'].map((tech) => (
+                  {['React', 'JavaScript', 'Supabase', 'PostgreSQL', 'Flutter'].map((tech) => (
                     <span
                       key={tech}
                       className="font-mono text-[11px] px-3 py-1 border border-[rgba(245,245,245,0.12)] bg-[#111111] text-[#F5F5F5]/90 uppercase tracking-wider"
@@ -159,7 +161,7 @@ export const SelectedWorks: React.FC = () => {
                   </div>
                   <div className="p-2.5 border border-[rgba(245,245,245,0.1)] bg-[#090909]">
                     <span className="label-tech block text-[9px] text-[#888888]">DESTINATION</span>
-                    <span className="font-mono text-xs text-[#F5F5F5] font-semibold">CHENNAI CENTRAL</span>
+                    <span className="font-mono text-xs text-[#F5F5F5] font-semibold">SALEM CENTRAL</span>
                   </div>
                 </div>
 
@@ -242,7 +244,7 @@ export const SelectedWorks: React.FC = () => {
 
               {/* Technology Badges */}
               <div className="flex flex-wrap gap-2 mb-8">
-                {['React', 'TypeScript', 'Supabase'].map((tech) => (
+                {['React', 'JavaScript', 'Supabase'].map((tech) => (
                   <span
                     key={tech}
                     className="font-mono text-[11px] px-2.5 py-1 border border-[rgba(245,245,245,0.12)] bg-[#111111] text-[#F5F5F5]/90 uppercase tracking-wider"

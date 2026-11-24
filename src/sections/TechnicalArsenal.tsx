@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Terminal, Database, Layout, Cpu, Smartphone } from 'lucide-react';
+import { Terminal, Database, Layout, Cpu } from 'lucide-react';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 interface SkillItem {
@@ -27,7 +27,6 @@ const CATEGORIES: CategoryGroup[] = [
       { name: 'Python', sub: 'Scripting & Data Analysis' },
       { name: 'C', sub: 'Systems & Memory Model' },
       { name: 'JavaScript', sub: 'Modern ES6+ Runtime' },
-      { name: 'TypeScript', sub: 'Static Type Architecture' },
     ],
   },
   {
@@ -40,7 +39,6 @@ const CATEGORIES: CategoryGroup[] = [
       { name: 'CSS', sub: 'Modern Grid, Flex & Design Tokens' },
       { name: 'JavaScript', sub: 'DOM & Async Lifecycle' },
       { name: 'React', sub: 'Component Trees & Hooks' },
-      { name: 'TypeScript', sub: 'Type-Safe UI Systems' },
     ],
   },
   {
@@ -67,16 +65,6 @@ const CATEGORIES: CategoryGroup[] = [
       { name: 'Linux', sub: 'POSIX Environment & Shell' },
       { name: 'Ubuntu', sub: 'Workstation OS & Server Host' },
       { name: 'VS Code', sub: 'Primary IDE & Extensions' },
-    ],
-  },
-  {
-    number: '05',
-    category: 'APPLICATION DEVELOPMENT',
-    subheading: 'MULTI-PLATFORM RUNTIMES',
-    icon: <Smartphone size={14} className="text-[#E53935]" aria-hidden="true" />,
-    items: [
-      { name: 'Flutter', sub: 'Cross-Platform Mobile UI' },
-      { name: 'Streamlit', sub: 'Rapid Data & AI Web Apps' },
     ],
   },
 ];

@@ -3,6 +3,7 @@ import { SmoothScroll } from '@/components/SmoothScroll';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/sections/Hero';
+import { TerminalSection } from '@/sections/TerminalSection';
 import { About } from '@/sections/About';
 import { SelectedWorks } from '@/sections/SelectedWorks';
 import { TechnicalArsenal } from '@/sections/TechnicalArsenal';
@@ -18,6 +19,7 @@ export const App: React.FC = () => {
         <Navbar statusText="PORTFOLIO / 2026" />
         <main className="pt-14 md:pt-16">
           <Hero />
+          <TerminalSection />
           <About />
           <SelectedWorks />
           <TechnicalArsenal />
