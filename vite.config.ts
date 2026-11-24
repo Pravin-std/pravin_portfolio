@@ -8,6 +8,17 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    // Ensures Vite process exits cleanly on CI / Vercel after build completes,
+    // preventing tailwindcss/vite background worker from keeping the event loop alive.
+    {
+      name: 'force-exit-after-build',
+      apply: 'build',
+      closeBundle() {
+        setTimeout(() => {
+          process.exit(0);
+        }, 20);
+      },
+    },
   ],
   resolve: {
     alias: {
@@ -15,11 +26,15 @@ export default defineConfig({
     },
   },
   build: {
-    chunkSizeWarningLimit: 1000,
+    target: 'es2020',
+    sourcemap: false,
+    chunkSizeWarningLimit: 900,
     rollupOptions: {
       output: {
         manualChunks: {
-          'three-vendor': ['three', '@react-three/fiber', '@react-three/drei'],
+          'three-core': ['three'],
+          'three-fiber': ['@react-three/fiber', '@react-three/drei'],
+          'ui-motion': ['motion', 'lenis'],
         },
       },
     },
