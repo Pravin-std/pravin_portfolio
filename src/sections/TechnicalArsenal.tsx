@@ -84,7 +84,7 @@ export const TechnicalArsenal: React.FC = () => {
     <section
       id="stack"
       aria-label="Technical Arsenal - Core Capabilities"
-      className="relative py-24 md:py-36 bg-[#090909] text-[#F5F5F5] border-fine-t select-none"
+      className="relative py-24 md:py-36 bg-transparent text-[#F5F5F5] border-fine-t select-none"
     >
       {/* Background Architectural Grid Lines */}
       <div className="absolute inset-0 pointer-events-none z-0 opacity-15" aria-hidden="true">

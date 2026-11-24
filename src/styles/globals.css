@@ -141,6 +141,59 @@
   pointer-events: none;
 }
 
+/* Background System Atmospheric Keyframes & Animations */
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.05) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes driftSlow {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(35px, -25px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scanSweep {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 9s ease-in-out infinite;
+}
+
+.animate-drift-slow {
+  animation: driftSlow 22s ease-in-out infinite;
+}
+
+.animate-scan-sweep {
+  animation: scanSweep 14s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
 /* Respect user's motion preferences strictly */
 @media (prefers-reduced-motion: reduce) {
   *,

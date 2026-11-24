@@ -18,7 +18,7 @@ export const SelectedWorks: React.FC = () => {
     <section
       id="projects"
       aria-label="Selected Works - Project Archive"
-      className="relative py-24 md:py-36 bg-[#090909] text-[#F5F5F5] border-fine-t select-none"
+      className="relative py-24 md:py-36 bg-transparent text-[#F5F5F5] border-fine-t select-none"
     >
       {/* Fallback anchor for backward compatibility */}
       <div id="selected-works" className="sr-only" aria-hidden="true" />

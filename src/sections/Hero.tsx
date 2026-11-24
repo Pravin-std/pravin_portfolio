@@ -35,7 +35,7 @@ export const Hero: React.FC = () => {
     <section
       id="work"
       aria-label="Work - Introduction & Signature 3D Experience"
-      className="relative min-h-[calc(100vh-4rem)] flex flex-col justify-between overflow-hidden bg-[#090909] text-[#F5F5F5] select-none"
+      className="relative min-h-[calc(100vh-4rem)] flex flex-col justify-between overflow-hidden bg-transparent text-[#F5F5F5] select-none"
     >
       {/* Fallback anchor for backward compatibility */}
       <div id="hero" className="sr-only" aria-hidden="true" />

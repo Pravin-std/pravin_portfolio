@@ -2,6 +2,7 @@ import React from 'react';
 import { SmoothScroll } from '@/components/SmoothScroll';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { Navbar } from '@/components/Navbar';
+import { BackgroundSystem } from '@/components/background/BackgroundSystem';
 import { Hero } from '@/sections/Hero';
 import { TerminalSection } from '@/sections/TerminalSection';
 import { About } from '@/sections/About';
@@ -15,9 +16,11 @@ export const App: React.FC = () => {
   return (
     <SmoothScroll>
       <div id="top" className="relative min-h-screen bg-[#090909] text-[#F5F5F5]">
+        {/* Immersive Interactive Background System (Grid, Crimson Lighting, Particle Network) */}
+        <BackgroundSystem />
         <ScrollProgress />
         <Navbar statusText="PORTFOLIO / 2026" />
-        <main className="pt-14 md:pt-16">
+        <main className="relative z-10 pt-14 md:pt-16">
           <Hero />
           <TerminalSection />
           <About />

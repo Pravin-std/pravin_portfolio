@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
   return (
     <footer
       aria-label="Colophon & System Telemetry"
-      className="relative bg-[#090909] text-[#F5F5F5] border-fine-t py-12 select-none"
+      className="relative bg-transparent text-[#F5F5F5] border-fine-t py-12 select-none"
     >
       <div className="editorial-container relative z-10 flex flex-col gap-8">
         {/* Top Colophon Row */}
